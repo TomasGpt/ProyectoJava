@@ -36,7 +36,7 @@ int nivel = switch (nivelTexto) {
     case "analizar" -> 3;
     case "evaluar" -> 4;
     case "crear" -> 5;
-    default -> -1; // nivel inválido
+    default -> -1; 
 };
 if (nivel >= 0 && nivel <= 5) {
     conteo[nivel]++;
