@@ -15,7 +15,6 @@ public class MainWindow extends javax.swing.JFrame {
         initComponents();
     }
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         lblCantidadItems = new javax.swing.JLabel();
@@ -74,8 +73,8 @@ public class MainWindow extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
-    private void btnIniciarPruebaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarPruebaActionPerformed
+    }
+    private void btnIniciarPruebaActionPerformed(java.awt.event.ActionEvent evt) {
     String nombre = JOptionPane.showInputDialog(this, "Ingrese su nombre:");
     String rut = JOptionPane.showInputDialog(this, "Ingrese su RUT:");
     String fecha = JOptionPane.showInputDialog(this, "Ingrese la fecha (dd-mm-yyyy):");
@@ -86,9 +85,9 @@ public class MainWindow extends javax.swing.JFrame {
             ventanaPrueba.setVisible(true);
     } else {
         JOptionPane.showMessageDialog(this, "Debe ingresar todos los datos para continuar.");
-    }//GEN-LAST:event_btnIniciarPruebaActionPerformed
+    }
  }
-    private void btnCargarArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCargarArchivoActionPerformed
+    private void btnCargarArchivoActionPerformed(java.awt.event.ActionEvent evt) {
         JFileChooser fileChooser = new JFileChooser();
         int resultado = fileChooser.showOpenDialog(this);
 
@@ -107,14 +106,10 @@ public class MainWindow extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Error al cargar archivo: " + e.getMessage());
             }
         }
-    }//GEN-LAST:event_btnCargarArchivoActionPerformed
+    }
 
     public static void main(String args[]) {
   
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -125,15 +120,12 @@ public class MainWindow extends javax.swing.JFrame {
         } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
             logger.log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
         java.awt.EventQueue.invokeLater(() -> new MainWindow().setVisible(true));
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton btnCargarArchivo;
     private javax.swing.JToggleButton btnIniciarPrueba;
     private javax.swing.JLabel lblCantidadItems;
     private javax.swing.JLabel lblTiempoTotal;
-    // End of variables declaration//GEN-END:variables
 }
