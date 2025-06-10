@@ -40,12 +40,12 @@ private void mostrarItem() {
     if ("VF".equalsIgnoreCase(item.getTipoItem())) {
         opcion1.setText("Verdadero");
         opcion2.setText("Falso");
-        opcion3.setVisible(false); // Oculta tercera opción
+        opcion3.setVisible(false); 
     } else {
         opcion1.setText(item.getOpcion1());
         opcion2.setText(item.getOpcion2());
         opcion3.setText(item.getOpcion3());
-        opcion3.setVisible(true);  // Muestra tercera opción
+        opcion3.setVisible(true);  
     }
 
     int respuestaGuardada = respuestasUsuario[indiceActual];
@@ -59,7 +59,6 @@ private void mostrarItem() {
 }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
@@ -153,19 +152,18 @@ private void mostrarItem() {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void opcion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcion1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_opcion1ActionPerformed
+    private void opcion1ActionPerformed(java.awt.event.ActionEvent evt) {
+    }
 
-    private void btnAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnteriorActionPerformed
+    private void btnAnteriorActionPerformed(java.awt.event.ActionEvent evt) {
       guardarRespuestaSeleccionada();
     if (indiceActual > 0) {
         indiceActual--;
         mostrarItem();
     }    
-    }//GEN-LAST:event_btnAnteriorActionPerformed
+    }
     private void guardarRespuestaSeleccionada() {
      Item item = items.get(indiceActual);
     if (opcion1.isSelected()) {
@@ -178,31 +176,24 @@ private void mostrarItem() {
         respuestasUsuario[indiceActual] = -1;
     }
     }
-    private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
+    private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {
         guardarRespuestaSeleccionada();
         if (indiceActual < items.size() - 1) {
             indiceActual++;
             mostrarItem();
         }
-    }//GEN-LAST:event_btnSiguienteActionPerformed
+    }
 
-    private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
+    private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {
     guardarRespuestaSeleccionada();
     VentanaResultados resultados = new VentanaResultados(items, respuestasUsuario, nombre, rut, fecha);
     resultados.setVisible(true);
     this.dispose();
-    }//GEN-LAST:event_btnEnviarActionPerformed
+    }
 
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
       
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -216,7 +207,6 @@ private void mostrarItem() {
         
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton btnAnterior;
     private javax.swing.JToggleButton btnEnviar;
     private javax.swing.JToggleButton btnSiguiente;
@@ -225,5 +215,4 @@ private void mostrarItem() {
     private javax.swing.JRadioButton opcion1;
     private javax.swing.JRadioButton opcion2;
     private javax.swing.JRadioButton opcion3;
-    // End of variables declaration//GEN-END:variables
 }
