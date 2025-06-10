@@ -30,8 +30,6 @@ public class Item {
     public String getTipoItem() { return tipoItem; }
     public String getNivelBloom() { return nivelBloom; }
     public int getTiempoEstimado() { return tiempoEstimado; }
-
-    // ✅ Método corregido: ahora está fuera de otros métodos
     public String getOpcionPorIndice(int indice) {
         switch (indice) {
             case 0: return opcion1;
